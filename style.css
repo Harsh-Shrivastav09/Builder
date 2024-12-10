@@ -1,0 +1,734 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+::-webkit-scrollbar
+{
+    width:0.5rem;
+    background-color: darkgrey;
+}
+::-webkit-scrollbar-thumb
+{
+    width:0.5rem;
+    background-color: darkgoldenrod;
+    border-radius:5rem;
+}
+
+/* Menu-Bar */
+Header
+{
+    height: 12vh;
+    width: 98%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color: black;
+}
+#logo
+{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#logo2
+{
+    color: yellow;
+    font-size: 2.5rem;
+}
+#menu-icon
+{
+    color: white;
+    font-size: 3rem;
+    display: none;
+    cursor: pointer;
+}
+ul
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+li, a
+{
+    color: white;
+    font-size: 1.4rem;
+}
+ul li:hover a
+{
+    color: yellow;
+    transition: .2s all linear;
+    cursor: pointer;
+}
+#Home-active
+{
+    color: yellow;
+}
+.log
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.login
+{
+    background-color: black;
+    border: 2px solid yellow;
+    color: yellow;
+    padding: 6px 15px;
+    border-radius: 8px;
+}
+.login:hover
+{
+    transition: .2s all linear;
+    background-color: yellow;
+    color: black;
+}
+.logout
+{
+    background-color: black;
+    border: 2px solid yellow;
+    color: yellow;
+    padding: 6px 15px;
+    border-radius: 8px;
+}
+.logout:hover
+{
+    transition: .2s all linear;
+    background-color: yellow;
+    color: black;
+}
+@media (max-width:992px)
+{
+    header
+    {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    .log
+    {
+        font-size: 1rem;
+    }
+    ul
+    {
+        width: 92%;
+        padding: 10px 0px;
+        border-radius: 20px;
+        position: absolute;
+        top: -590px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: black;
+        transition: .2s all linear;
+    }
+    #menu-icon
+    {
+        display: initial;
+    }
+}
+ul.active
+{
+    top: 110%;
+}
+@media (max-width:450px)
+{
+    header
+    {
+        padding: 0px 10px;
+    }
+    .log
+    {
+        display: none;
+    }
+    #menu-icon
+    {
+        font-size: 3rem;
+    }
+}
+
+/* Section-Home */
+#Home
+{
+    height: 95vh;
+    background-image: url(/Images/Construction2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-container
+{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(23,21,21,0.773546918767507) 24%, 
+    rgba(31,27,27,0.7791491596638656) 52%, rgba(29,22,22,0.7959558823529411) 80%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.home-text
+{
+    color: white;
+    margin-top: 50px;
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px yellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+span
+{
+    background-color: yellow;
+    padding: 2px 8px;
+    border-radius: 8px;
+    color: black;
+    text-shadow: 1px 1px white;
+}
+#home-text-lorem
+{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.discover
+{
+    color: yellow;
+    background-color: transparent;
+    border: 1px solid yellow;
+    text-shadow: 1px 1px black;
+    border-radius: 12px;
+    padding: 5px 15px;
+    font-size: 2rem;
+}
+.discover:hover
+{
+    background-color: yellow;
+    color: black;
+    transition: .2s all linear;
+    text-shadow: none;
+}
+@media (max-width:992px)
+{
+    #home
+    {
+        height: auto;
+        padding: 10px 0px;
+    }
+    .home-container
+    {
+        height: 100%;
+    }
+    .home-text
+    {
+        font-size: 4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #home-text-lorem
+    {
+        padding: 0px 20px;
+        font-size: 1.5rem;
+    }
+    .discover
+    {
+        font-size: 2rem;
+    }
+}
+@media (max-width:450px)
+{
+    .home-text
+    {
+        font-size: 3rem;
+    }
+}
+
+/* Section-About */
+#About
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.ab-text
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.about-text
+{
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.about-text-lorem
+{
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+#cards
+{
+    display: grid;
+    grid-template-columns: 52vh 52vh 52vh;
+    gap: 1rem;
+    padding: 10px;
+}
+.cards1
+{
+    border-radius: 20px;
+    padding: 10px 10px;
+    box-shadow: 0px 1px 5px 0px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+h3
+{
+    font-family: 'Lucida Sans';
+    font-size: 1.5rem;
+    text-align: center;
+}
+#p1
+{
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+#logo1
+{
+    color: darkgoldenrod;
+    font-size: 8rem;
+}
+@media (max-width:992px)
+{
+    #About
+    {
+        height: auto;
+        padding: 20px 0px;
+    }
+    .about-text
+    {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .about-text-lorem
+    {
+        font-size: 1.1rem;
+    }
+    #cards
+    {
+        grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+        width: 90%;
+    }
+    .cards1
+    {
+        height: auto;
+        padding: 30px 10px;
+    }
+}
+
+/* Section-Service */
+#Service
+{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-container
+{
+    display: grid;
+    grid-template-columns: 35vw 45vw;
+    gap: 1rem;
+    padding: 10px;
+}
+.service-img
+{
+    height: 60vh;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.service-text
+{
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+.s-big-text
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-shadow: 1px 1px black;
+}
+.s-lorem
+{
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.read-more
+{
+    border: 2px solid darkgoldenrod;
+    color: darkgoldenrod;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+@media (max-width:992px)
+{
+    #Service
+    {
+        height: auto;
+        padding: 20px 0px;
+    }
+    .service-container
+    {
+        grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    }
+    .service-img
+    {
+        order: 2;
+        height: auto;
+    }
+    .service-text
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .s-big-text
+    {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .s-lorem
+    {
+        text-align: justify;
+    }
+}
+@media (max-width:840px)
+{
+    .service-img
+    {
+        order: unset;
+    }
+    .s-big-text
+    {
+        font-size: 2rem;
+    }
+}
+@media (max-width:350px)
+{
+    .s-big-text
+    {
+        font-size: 1.6rem;
+    }
+}
+
+/* Section-customers */
+#customers
+{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.customers-text
+{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+}
+.customer-container
+{
+    display: grid;
+    grid-template-columns: 23vw 23vw 23vw;
+    gap: 1rem;
+    padding: 10px;
+}
+.c-c-box
+{
+    border-radius: 10px;
+    box-shadow: 2px 1px 5px 0px;
+    border-bottom: 8px solid goldenrod;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+.coma
+{
+    margin-left: 10px;
+    color: goldenrod;
+    font-size: 1.5rem;
+}
+.stars
+{
+    margin-left: 10px;
+    color: green;
+    font-size: 1.2rem;
+}
+.lorem
+{
+    margin-left: 10px;
+    margin-right: 8px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+}
+.profile
+{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: darkgoldenrod;
+}
+.p-img
+{
+    height: 10vh;
+    width: 30%;
+    margin: 0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+@media(max-width:992px)
+{
+    #customers
+    {
+        height: auto;
+        padding: 20px 0px;
+    }
+    .customer-container
+    {
+        grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+        width: 90%;
+    }
+    .customers-text
+    {
+        font-size: 2.5rem;
+    }
+    .c-c-box
+    {
+        height: auto;
+        padding: 30px 0px;
+    }
+    .lorem
+    {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:400px)
+{
+    .customers-text
+    {
+        font-size: 2rem;
+    }
+}
+
+/* Section-Footer */
+#footer
+{
+    height: 75vh;
+    /* background-color: rgb(29, 28, 28); */
+    background-image: url(/Images/Construction2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.f-con
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, rgba(23,21,21,0.773546918767507) 24%, 
+    rgba(31,27,27,0.7791491596638656) 52%, rgba(29,22,22,0.7959558823529411) 80%);
+}
+.footer-container
+{
+    color: white;
+    display: grid;
+    grid-template-columns: 25vw 16vw 16vw 16vw;
+    gap: 2rem;
+    padding: 10px;
+}
+.footer-box
+{
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+.f-logo-img
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0px 20px;
+}
+.f-lorem
+{
+    margin: 0px 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: lightgray;
+}
+.f-icons
+{
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#f-icons
+{
+    font-size: 1.8rem;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+}
+#f-icons:hover
+{
+    border: 2px solid rgb(218, 142, 3);
+    color: white;
+    background-color: rgb(218, 142, 3);
+    transition: .2s all linear;
+}
+.f-content
+{
+    margin: 0px 20px;
+    font-size: 1.8rem;
+}
+.f-sub
+{
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+.types
+{
+    font-size: 1.1rem;
+    color: lightgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+.copyright
+{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    color: lightgray;
+}
+@media(max-width:992px)
+{
+    #footer
+    {
+        height: auto;
+    }
+    .f-con
+    {
+        padding: 10px 0px;
+    }
+    .footer-container
+    {
+        grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+        gap: 1rem;
+    }
+    .footer-box
+    {
+        height: auto;
+        padding: 10px 0px;
+    }
+}
+
+
