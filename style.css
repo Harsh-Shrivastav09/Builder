@@ -599,7 +599,7 @@ h3
 {
     height: 75vh;
     /* background-color: rgb(29, 28, 28); */
-    background-image: url(/Images/Construction2.jpg);
+    background-image: url(./public/Images/Construction2.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
