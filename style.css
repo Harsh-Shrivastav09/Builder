@@ -176,7 +176,7 @@ ul.active
 #Home
 {
     height: 95vh;
-    background-image: url(/Images/Construction2.jpg);
+    background-image: url(./public/Images/Construction2.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
